@@ -1,0 +1,157 @@
+/* Tipografia geral */
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif; /* Fontes principais para o corpo */
+  font-size: 16px; /* Tamanho da fonte principal */
+  color: #333; /* Cor do texto */
+  background-color: #f5f7fa; /* Cor de fundo do corpo */
+  margin: 0; /* Remove a margem padrão do body */
+}
+
+
+
+/* Layout */
+.main-container {
+  max-width: 1200px; /* Largura máxima do container principal */
+  margin: auto; /* Centraliza o container */
+  padding: 2rem; /* Adiciona espaçamento interno */
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #282c34; /* Cor de fundo do cabeçalho */
+  padding: 1rem; /* Espaçamento interno */
+}
+
+/* Barra de navegação */
+.navbar .nav-list {
+  display: flex; /* Alinha os itens da lista na horizontal */
+  gap: 1rem; /* Espaçamento entre os itens */
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding da lista */
+  margin: 0; /* Remove a margem da lista */
+}
+
+.navbar a {
+  color: white; /* Cor do texto dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.navbar a.active {
+  font-weight: bold; /* Deixa o link ativo em negrito */
+}
+
+/* Formulário */
+.form-card {
+  background-color: #fff; /* Cor de fundo do cartão de formulário */
+  padding: 2rem; /* Espaçamento interno */
+  margin-bottom: 2rem; /* Espaçamento inferior */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para o formulário */
+}
+
+.form label {
+  display: block; /* Faz o rótulo ocupar toda a largura */
+  margin-top: 1rem; /* Espaçamento superior */
+}
+
+.form input {
+  width: 100%; /* Faz o campo de input ocupar toda a largura disponível */
+  padding: 0.5rem; /* Espaçamento interno */
+  margin-top: 0.25rem; /* Espaçamento superior */
+  border: 1px solid #ccc; /* Borda suave para o campo */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Botão de envio do formulário */
+.btn-submit {
+  margin-top: 1rem; /* Espaçamento superior */
+  padding: 0.75rem 1.5rem; /* Espaçamento interno do botão */
+  background-color: #007bff; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Cards de exibição */
+.cards-container {
+  display: grid; /* Layout de grid para os cards */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Cria colunas automáticas para os cards */
+  gap: 1rem; /* Espaçamento entre os cards */
+}
+
+.card {
+  background-color: #f9f9f9; /* Cor de fundo do card */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 1.5rem; /* Espaçamento interno */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra suave para o card */
+}
+
+/* Ações do card */
+.card-actions {
+  margin-top: 1rem; /* Espaçamento superior */
+  display: flex; /* Layout de flexbox */
+  justify-content: space-between; /* Espaça os botões no card */
+}
+
+/* Botões reutilizáveis */
+button {
+  font-family: inherit; /* Mantém a fonte herdada do elemento pai */
+  font-size: 1rem; /* Tamanho da fonte */
+  padding: 0.6rem 1.2rem; /* Espaçamento interno */
+  margin: 0.25rem; /* Espaçamento entre os botões */
+  border: none; /* Remove bordas */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que o botão é clicável */
+  transition: background 0.3s ease, box-shadow 0.2s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Estilo do botão primário */
+button.btn-primary {
+  background-color: #007bff; /* Cor de fundo azul */
+  color: #fff; /* Cor do texto branco */
+}
+
+/* Efeito de hover no botão primário */
+button.btn-primary:hover {
+  background-color: #0056b3; /* Cor de fundo mais escura no hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
+}
+
+/* Estilo do botão de perigo */
+button.btn-danger {
+  background-color: #dc3545; /* Cor de fundo vermelha */
+  color: #fff; /* Cor do texto branco */
+}
+
+/* Efeito de hover no botão de perigo */
+button.btn-danger:hover {
+  background-color: #b52a37; /* Cor de fundo mais escura no hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
+}
+
+/* Estilo do botão secundário */
+button.btn-secondary {
+  background-color: #6c757d; /* Cor de fundo cinza */
+  color: white; /* Cor do texto branco */
+}
+
+/* Efeito de hover no botão secundário */
+button.btn-secondary:hover {
+  background-color: #5a6268; /* Cor de fundo mais escura no hover */
+}
+
+/* Estilo para mensagens de erro */
+.error {
+  color: #dc3545; /* Cor vermelha para mensagens de erro */
+  font-size: 0.875rem; /* Tamanho de fonte menor */
+  margin-top: 0.25rem; /* Espaçamento superior */
+}
+
+.error small {
+  color: red; /* Cor vermelha para o texto de erro */
+  font-size: 0.85em; /* Tamanho de fonte ligeiramente menor */
+  margin-top: 2px; /* Espaçamento superior */
+  display: block; /* Exibe o texto de erro em bloco */
+}
+
+

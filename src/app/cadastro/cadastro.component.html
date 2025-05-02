@@ -1,0 +1,23 @@
+<!-- Container dos cards -->
+<div class="cards-container">
+
+  <!-- Percorre cada item do vetor e exibe como card -->
+  <div *ngFor="let c of vetor" class="card">
+    
+    <!-- Exibe nome do cadastro -->
+    <h3>{{ c.nome }}</h3>
+
+    <!-- Exibe email -->
+    <p><strong>Email:</strong> {{ c.email }}</p>
+
+    <!-- Exibe telefone -->
+    <p><strong>Telefone:</strong> {{ c.telefone }}</p>
+
+    <!-- Ações do card -->
+    <div class="card-actions">
+      <button class="btn-primary" (click)="Editar(c.id)">Editar</button>
+      <button class="btn-danger" (click)="remover(c)">Excluir</button>
+    </div>
+
+  </div>
+</div>

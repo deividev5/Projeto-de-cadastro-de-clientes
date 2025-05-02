@@ -1,0 +1,46 @@
+<!-- Formulário para Editar Cadastro -->
+<div class="form-card">
+  <h2>Editar Cadastro</h2>
+
+  <!-- Formulário reativo, ligado ao FormGroup -->
+  <form [formGroup]="form" (ngSubmit)="atualizarCadastro()" class="form">
+    
+    <!-- Campo Nome -->
+    <label for="nome">Nome</label>
+    <input id="nome" formControlName="nome" />
+    
+    <!-- Exibição de mensagens de erro para o campo nome -->
+    <div *ngIf="form.get('nome')?.touched && form.get('nome')?.invalid" class="error">
+      <small *ngIf="form.get('nome')?.errors?.['required']">Nome é obrigatório.</small>
+      <small *ngIf="form.get('nome')?.errors?.['minlength']">Mínimo de 3 caracteres.</small>
+    </div>
+
+    <!-- Campo Email -->
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" type="email" />
+    
+    <!-- Exibição de mensagens de erro para o campo email -->
+    <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class="error">
+      <small *ngIf="form.get('email')?.errors?.['required']">Email é obrigatório.</small>
+      <small *ngIf="form.get('email')?.errors?.['email']">Formato de email inválido.</small>
+    </div>
+
+    <!-- Campo Telefone -->
+    <label for="telefone">Telefone</label>
+    <input
+      id="telefone"
+      formControlName="telefone"
+      (input)="formatarTelefone()"
+      maxlength="15"
+    />
+    
+    <!-- Exibição de mensagens de erro para o campo telefone -->
+    <div *ngIf="form.get('telefone')?.touched && form.get('telefone')?.invalid" class="error">
+      <small *ngIf="form.get('telefone')?.errors?.['required']">Telefone é obrigatório.</small>
+      <small *ngIf="form.get('telefone')?.errors?.['minlength']">Telefone incompleto.</small>
+    </div>
+
+    <!-- Botão de envio: só é habilitado se o formulário estiver válido -->
+    <button type="submit" class="btn-submit" [disabled]="form.invalid">Atualizar</button>
+  </form>
+</div>

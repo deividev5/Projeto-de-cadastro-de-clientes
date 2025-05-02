@@ -1,27 +1,25 @@
-# CadastroClientes
+# Projeto de Cadastro de Clientes
+Neste projeto, utilizei o **Angular** como framework frontend para construir uma interface moderna, responsiva e de fácil usabilidade. Toda a comunicação com o banco de dados foi feita através de uma API desenvolvida em **PHP**, responsável por processar as requisições de cadastro, listagem, edição e exclusão dos clientes.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+O banco de dados **MySQL** foi utilizado para armazenar as informações de forma estruturada e segura. Essa integração entre as tecnologias permite uma aplicação completa com funcionalidades de **CRUD** (Create, Read, Update, Delete).
 
-## Development server
+## ✅ Principais recursos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Formulários com validações reativas no Angular.
+- Máscaras para campos como telefone.
+- Integração entre frontend e backend via HTTP.
+- Arquitetura separada para organização e manutenibilidade.
+- Utilização de boas práticas com services, modules e rotas.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Instalação e Execução Local
 
-## Build
+### Requisitos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js instalado
+- Angular CLI
+- PHP (versão 7.4+)
+- Servidor MySQL
+- Git
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

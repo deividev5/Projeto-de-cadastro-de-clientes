@@ -1,0 +1,59 @@
+<!-- Formulário de Cadastro de Cliente -->
+<div class="form-card">
+  <h2>Cadastrar Cliente</h2>
+
+  <!-- Template-driven form usando ngForm -->
+  <form #form="ngForm" (ngSubmit)="cadastrar()" class="form">
+
+    <!-- Campo Nome -->
+    <label for="nome">Nome</label>
+    <input
+      id="nome"
+      name="nome"
+      [(ngModel)]="cadastro.nome"
+      required
+      #nome="ngModel"
+    />
+    <!-- Validação: nome obrigatório -->
+    <div *ngIf="nome.invalid && nome.touched" class="error">
+      Nome é obrigatório.
+    </div>
+
+    <!-- Campo Email -->
+    <label for="email">Email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      [(ngModel)]="cadastro.email"
+      required
+      email
+      #email="ngModel"
+    />
+    <!-- Validação: email obrigatório e válido -->
+    <div *ngIf="email.invalid && email.touched" class="error">
+      Email é obrigatório e precisa ser válido.
+    </div>
+
+    <!-- Campo Telefone -->
+    <label for="telefone">Telefone</label>
+    <input
+      id="telefone"
+      name="telefone"
+      [(ngModel)]="cadastro.telefone"
+      required
+      (input)="formatarTelefone()"
+      maxlength="15"
+      #telefone="ngModel"
+    />
+    <!-- Validação: telefone obrigatório -->
+    <div *ngIf="telefone.invalid && telefone.touched" class="error">
+      Telefone é obrigatório (somente números com 10 ou 11 dígitos).
+    </div>
+
+   <!-- Botão de envio: só é habilitado se o formulário estiver válido -->
+   <button type="submit" class="btn-primary" [disabled]="form.invalid">
+    Cadastrar
+  </button>
+</form>
+</div>

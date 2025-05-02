@@ -1,0 +1,30 @@
+<!-- Cabeçalho da aplicação -->
+<header class="header">
+  <!-- Barra de navegação -->
+  <nav class="navbar">
+    <!-- Lista de links de navegação -->
+    <ul class="nav-list">
+      
+      <!-- Link para a página de Cadastro -->
+      <li>
+        <a 
+          [routerLink]="'/cadastrar'" 
+          routerLinkActive="active"
+        >
+          Cadastrar
+        </a>
+      </li>
+      
+      <!-- Link para a página de visualizar cadastros -->
+      <li>
+        <a 
+          [routerLink]="'/'" 
+          routerLinkActive="active"
+        >
+          Ver Cadastros
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</header>
